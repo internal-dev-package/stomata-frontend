@@ -10,7 +10,7 @@
         <!-- Add other wallet schemes names here -->
     </queries>
     <application
-        android:label="stomata_app"
+        android:label="@string/app_name"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

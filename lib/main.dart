@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Stomatrade',
       theme: ThemeData(
         primaryColor: ColorUtils.primaryColors,
         scaffoldBackgroundColor: ColorUtils.bgColors,
