@@ -120,8 +120,8 @@ class PortofolioItem extends StatelessWidget {
                         LinearProgressBar(
                           minHeight: 5,
                           maxSteps: int.parse(fundingGoal),
-                          progressType: LinearProgressBar.progressTypeLinear,
-                          currentStep: int.parse(totalFunding),
+                          progressType: ProgressType.linear,
+                          currentStep: int.parse(totalFunding) > int.parse(fundingGoal) ? int.parse(fundingGoal) : int.parse(totalFunding),
                           progressColor: ColorUtils.primaryColors,
                           backgroundColor: Colors.grey,
                           borderRadius: BorderRadius.circular(10),

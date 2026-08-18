@@ -117,8 +117,8 @@ class CardItem extends StatelessWidget {
                         LinearProgressBar(
                           minHeight: 5,
                           maxSteps: fundingGoal.toInt(),
-                          progressType: LinearProgressBar.progressTypeLinear,
-                          currentStep: totalFunding.toInt(),
+                          progressType: ProgressType.linear,
+                          currentStep: totalFunding.toInt() > fundingGoal.toInt() ? fundingGoal.toInt() : totalFunding.toInt(),
                           progressColor: ColorUtils.primaryColors,
                           backgroundColor: Colors.grey,
                           borderRadius: BorderRadius.circular(10),

@@ -250,16 +250,12 @@ class _PortofolioDetailScreenState extends State<PortofolioDetailScreen> {
                                               "0")
                                           .replaceAll('.', ''),
                                     ),
-                                    progressType:
-                                        LinearProgressBar.progressTypeLinear,
-                                    currentStep: int.parse(
-                                      (controller
-                                                  .portofolioDetail
-                                                  .value
-                                                  .currentFundingPrice ??
-                                              "0")
-                                          .replaceAll('.', ''),
-                                    ),
+                                    progressType: ProgressType.linear,
+                                    currentStep: (() {
+                                      int max = int.parse((controller.portofolioDetail.value.fundingPrice ?? "0").replaceAll('.', ''));
+                                      int current = int.parse((controller.portofolioDetail.value.currentFundingPrice ?? "0").replaceAll('.', ''));
+                                      return current > max ? max : current;
+                                    })(),
                                     progressColor: ColorUtils.primaryColors,
                                     backgroundColor: Colors.grey,
                                     borderRadius: BorderRadius.circular(10),
